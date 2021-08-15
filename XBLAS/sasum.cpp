@@ -2,7 +2,7 @@
 #include "xblas.h"
 #include "ehm.h"
 #include <cmath>
-using namespace std;
+
 
 float sasum (const  int n, const float *x, const  int incx)
 {
