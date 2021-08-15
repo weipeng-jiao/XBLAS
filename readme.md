@@ -1,5 +1,5 @@
 
-<div align=center> <img src="https://github.com/weipeng-jiao/XBLAS/blob/master/logo.JPG" > </div>
+<p align="center"><img src="https://github.com/weipeng-jiao/XBLAS/blob/master/logo.JPG" alt="matrix" height="170px" width="550px"></img></p>
 
 ![](https://img.shields.io/badge/license-MIT-blue)
 ![](https://img.shields.io/badge/language-C%2B%2B-9cf)
