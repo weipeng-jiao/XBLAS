@@ -37,5 +37,4 @@ void saxpy (const  int n, const float a, const float *x, const int incx, const f
             ystep+=incy;
         } 
     }
-    return asum;
 }

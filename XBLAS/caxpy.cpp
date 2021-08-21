@@ -1,9 +1,10 @@
 #include "xblas.h"
 #include "ehm.h"
 #include <cmath>
+#include <complex>
 
 
-void daxpy (const  int n, const double a, const double *x, const int incx, const double *y, const int incy)
+void caxpy (const  int n, const float a, const complex<float> *x, const int incx, const complex<float> *y, const int incy)
 {
     int xstep=0;
     int ystep=0;

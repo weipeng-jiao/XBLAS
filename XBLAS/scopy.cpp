@@ -1,9 +1,10 @@
+
 #include "xblas.h"
 #include "ehm.h"
 #include <cmath>
 
 
-void daxpy (const  int n, const double a, const double *x, const int incx, const double *y, const int incy)
+void scopy (const  int n,  const float *x, const int incx, const float *y, const int incy)
 {
     int xstep=0;
     int ystep=0;
@@ -15,24 +16,20 @@ void daxpy (const  int n, const double a, const double *x, const int incx, const
     //exception handling
     BlasErrorIF(n<=0||incx<=0||xnums<ixnums||ynums<iynums||xnums!=ynums);
 
-    if(a==0)
-    {
-        return;
-    }
-
+ 
     //calculation
     if(incx==1&&incy==1)
     {
         for(int i=0;i<n;i++)
         {
-            y[i]+=a*x[i];
+            y[i]=x[i];
         }
     }
     else
     {
        for(int i=0;i<n;i++)
         {
-            y[ystep]+=a*x[xstep];
+            y[ystep]=x[xstep];
             xstep+=incx;
             ystep+=incy;
         } 

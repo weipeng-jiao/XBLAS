@@ -8,11 +8,11 @@ float sasum (const  int n, const float *x, const  int incx)
 {
     float asum=0;
     int step=0;
-    int vnums=sizeof(x)/sizeof(x[0]);    //number of vector element
+    int xnums=sizeof(x)/sizeof(x[0]);    //number of x-vector element
     int inums=1+(n-1)*incx; //number of interval
 
     //exception handling
-    BlasErrorIF(n<=0||incx<=0||vnums<inums);
+    BlasErrorIF(n<=0||incx<=0||xnums<inums);
 
     //calculation
     if(incx==1)
