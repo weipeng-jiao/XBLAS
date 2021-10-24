@@ -4,8 +4,9 @@
 #include <cmath>
 
 
-void sdot (const  int n,  const float *x, const int incx, const float *y, const int incy)
+float sdot (const  int n,  const float *x, const int incx, const float *y, const int incy)
 {
+    float sum=0;
     int xstep=0;
     int ystep=0;
     int xnums=sizeof(x)/sizeof(x[0]);    //number of x-vector element
@@ -22,17 +23,17 @@ void sdot (const  int n,  const float *x, const int incx, const float *y, const 
     {
         for(int i=0;i<n;i++)
         {
-            y[i]=x[i];
+            sum+=x[i]*y[i];
         }
     }
     else
     {
        for(int i=0;i<n;i++)
         {
-            y[ystep]=x[xstep];
+            sum+=x[xstep]*y[ystep];
             xstep+=incx;
             ystep+=incy;
         } 
     }
-    return asum;
+    return sum;
 }

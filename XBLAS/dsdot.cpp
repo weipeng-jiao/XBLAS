@@ -30,7 +30,7 @@ double dsdot (const  int n,  const float *sx, const int incx, const float *sy, c
     {
        for(int i=0;i<n;i++)
         {
-            sum+=(double)x[xstep]*(double)y[ystep];
+            sum+=(double)sx[xstep]*(double)sy[ystep];
             xstep+=incx;
             ystep+=incy;
         } 
